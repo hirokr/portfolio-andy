@@ -57,8 +57,8 @@ export default function Header() {
           id="andyLogo"
           src="/images/andy-logo.png"
           alt="Andy Logo"
-          width={70}
-          height={70}
+          width={100}
+          height={100}
           priority
           className="absolute"
         />
