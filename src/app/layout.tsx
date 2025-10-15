@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { Poppins, Courier_Prime, Cutive_Mono } from 'next/font/google';
 import './globals.css';
+import gsap from 'gsap';
+import { ScrollTrigger, SplitText } from 'gsap/all';
+import Header from '@/components/Header';
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -25,16 +29,24 @@ export const metadata: Metadata = {
   description: 'Clone of Andy Portfolio',
 };
 
+export const experimental_ppr = true;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressContentEditableWarning suppressHydrationWarning spellCheck>
+    <html
+      lang="en"
+      suppressContentEditableWarning
+      suppressHydrationWarning
+      spellCheck
+    >
       <body
         className={`${poppins.variable} ${courierPrime.variable} ${cutiveMono.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
