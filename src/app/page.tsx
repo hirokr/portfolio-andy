@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
-    <main className="h-[200vh] ">
+    <main className="h-[200vh]">
       <Hero />
     </main>
   );
